@@ -1,5 +1,5 @@
 homepage: "https://www.ternair.com/"
 documentation: "https://www.ternair.com/"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
+  - sha: 9d0a84db177691a44a1b4931bcd3bb2c4d0abebc
     changeNotes: Initial release.
