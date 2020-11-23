@@ -1,5 +1,5 @@
 homepage: "https://www.ternair.com/en/"
 documentation: "https://github.com/Ternair-Software/tcl-template"
 versions:
-  - sha: 9d0a84db177691a44a1b4931bcd3bb2c4d0abebc
+  - sha: 39bcd4a7a7682071acab9470026c9dd0875db56c
     changeNotes: Initial release.
