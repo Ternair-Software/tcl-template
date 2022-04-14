@@ -1,19 +1,11 @@
-﻿___TERMS_OF_SERVICE___
-
-By creating or modifying this file you agree to Google Tag Manager's Community
-Template Gallery Developer Terms of Service available at
-https://developers.google.com/tag-manager/gallery-tos (or such other URL as
-Google may provide), as modified from time to time.
-
-
-___INFO___
+﻿___INFO___
 
 {
   "type": "TAG",
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Ternair Marketing Cloud Clicks Tracking",
+  "displayName": "Ternair Marketing Cloud Clicks Tracking 2.0",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -161,6 +153,36 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "help": "TID, fingerprint and URL are captured by default and therefore do not need to be added to mapping"
+  },
+  {
+    "type": "GROUP",
+    "name": "storage",
+    "displayName": "Storage",
+    "groupStyle": "NO_ZIPPY",
+    "subParams": [
+      {
+        "type": "CHECKBOX",
+        "name": "cookieStorage",
+        "checkboxText": "save in cookie",
+        "simpleValueType": true,
+        "defaultValue": true,
+        "alwaysInSummary": true
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "localStorage",
+        "checkboxText": "save in local storage",
+        "simpleValueType": true,
+        "alwaysInSummary": true
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "sessionStorage",
+        "checkboxText": "save in session",
+        "simpleValueType": true,
+        "alwaysInSummary": true
+      }
+    ]
   }
 ]
 
@@ -177,7 +199,7 @@ const createQueue = require('createQueue');
 const setCookie = require('setCookie');
 const queryPermission = require('queryPermission');
 
-const url = 'https://static.ternair.com/js/tcl-gtm.min.js';
+const url = 'https://ternair-test.ternairsoftware.com/clicks/js/tcl-gtm.js';
 
 let fail = false;
 
@@ -216,6 +238,10 @@ if (fail) {
     logToConsole('utm_campaign: ' + data.utm_campaign);
     logToConsole('utm_medium: ' + data.utm_medium);
     logToConsole('utm_source: ' + data.utm_source);
+    
+    logToConsole('cookieStorage: ' + data.cookieStorage);
+    logToConsole('localStorage: ' + data.localStorage);
+    logToConsole('sessionStorage: ' + data.sessionStorage);    
 
     if (data.DynamicMapping) {
       logToConsole('DynamicMapping.length: ' + data.DynamicMapping.length);
@@ -225,7 +251,10 @@ if (fail) {
     const payload = {
       utm_campaign: data.utm_campaign,
       utm_medium: data.utm_medium,
-      utm_source: data.utm_source
+      utm_source: data.utm_source,
+      cookieStorage: data.cookieStorage,
+      localStorage: data.localStorage,
+      sessionStorage: data.sessionStorage
     };
 
     // Add the dynamic mapping key and values to the payload
@@ -259,6 +288,10 @@ ___WEB_PERMISSIONS___
               {
                 "type": 1,
                 "string": "https://static.ternair.com/js/tcl-gtm.min.js"
+              },
+              {
+                "type": 1,
+                "string": "https://ternair-test.ternairsoftware.com/clicks/js/tcl-gtm.js"
               }
             ]
           }
