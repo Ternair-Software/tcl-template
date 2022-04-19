@@ -5,7 +5,7 @@
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Ternair Marketing Cloud Clicks Tracking 2.0",
+  "displayName": "Ternair Marketing Cloud Clicks Tracking",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -199,7 +199,7 @@ const createQueue = require('createQueue');
 const setCookie = require('setCookie');
 const queryPermission = require('queryPermission');
 
-const url = 'https://ternair-test.ternairsoftware.com/clicks/js/tcl-gtm.js';
+const url = 'https://static.ternair.com/js/tcl-gtm.min.js';
 
 let fail = false;
 
@@ -288,10 +288,6 @@ ___WEB_PERMISSIONS___
               {
                 "type": 1,
                 "string": "https://static.ternair.com/js/tcl-gtm.min.js"
-              },
-              {
-                "type": 1,
-                "string": "https://ternair-test.ternairsoftware.com/clicks/js/tcl-gtm.js"
               }
             ]
           }
