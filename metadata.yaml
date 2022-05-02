@@ -1,7 +1,7 @@
 homepage: "https://www.ternair.com/en/"
 documentation: "https://github.com/Ternair-Software/tcl-template"
 versions:
-  - sha: 0468f584348a42a430009989261278ed1556dc02
+  - sha: 5ee11643a83d3b8c50430bd340b554867264c5e1
     changeNotes: template name
   - sha: 57e623c800dc829154af3e5825a0ab526b5d3804
     changeNotes: define storage method
