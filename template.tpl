@@ -6,7 +6,7 @@
   "version": 1,
   "securityGroups": [],
   "displayName": "Ternair Marketing Cloud Clicks Tracking",
-  "categories": ["Marketing", "Personalization", "Session_Recording"]
+  "categories": ["MARKETING", "PERSONALIZATION", "SESSION_RECORDING"],
   "brand": {
     "id": "Ternair",
     "displayName": "Ternair",
