@@ -1,6 +1,8 @@
 homepage: "https://www.ternair.com/en/"
 documentation: "https://github.com/Ternair-Software/tcl-template"
 versions:
+  - sha: 69860f43030e573fe775b17829f1aeea9c1fe0ab
+    changeNotes: Added TERMS_OF_SERVICE
   - sha: 5f5e489afbe49ca26b9b00aec471787949d6a7cf
     changeNotes: Added categories
   - sha: fc0e174deeb56489fba9cd409beb2380acf5913f
